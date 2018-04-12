@@ -1,5 +1,4 @@
 
-
 def create_annotation(data):
     """
     Adds an annotation to MongoDB database.
