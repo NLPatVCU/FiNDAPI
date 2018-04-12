@@ -4,6 +4,8 @@ import os
 from flask import Flask, Blueprint
 from PaperScraper import settings
 from PaperScraper.api.restplus import api
+from PaperScraper.api.data.endpoints.annotation import ns as data_annotation_ns
+
 
 app = Flask(__name__)
 logging_conf_path = os.path.normpath(os.path.join(os.path.dirname(__file__), '../logging.conf'))
@@ -24,6 +26,7 @@ def initialize_app(flask_app):
 
     blueprint = Blueprint('api', __name__, url_prefix='/api')
     api.init_app(blueprint)
+    api.add_namespace(data_annotation_ns)
     flask_app.register_blueprint(blueprint)
 
 
