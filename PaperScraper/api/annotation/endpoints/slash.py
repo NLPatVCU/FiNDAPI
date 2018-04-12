@@ -18,15 +18,15 @@ class Annotation(Resource):
     @api.marshal_list_with(annotation)
     def get(self):
         """
-        Returns list of all classifications.
+        Returns list of all annotations made.
         """
         # TODO
         return []
 
 
-@ns.route('/<int:id>')
-@api.response(404, 'Classification not found.')
-class CategoryItem(Resource):
+@ns.route('/<int:annotation_id>')
+@api.response(404, 'Annotation not found.')
+class AnnotationItem(Resource):
 
     @api.marshal_with(annotation)
     def get(self, id):
@@ -36,10 +36,38 @@ class CategoryItem(Resource):
         # TODO
 
     @api.expect(annotation)
-    @api.response(204, 'Classification successfully updated.')
+    @api.response(204, 'Annotation successfully updated.')
     def put(self, id):
         """
         Updates a annotation.
+        """
+        data = request.json
+        update_annotation(id, data)
+        return None, 204
+
+
+@ns.route('/<int:paper_id>')
+@api.response(404, 'Paper not found.')
+class PaperAnnotations(Resource):
+
+    @api.marshal_with(annotation)
+    def get(self, paper_id):
+        """
+        Returns all annotations made on a paper.
+        """
+        # TODO
+
+    def post(self, paper_id):
+        """
+        Create an annotation for a given paper.
+        """
+        # TODO
+
+    @api.expect(annotation)
+    @api.response(204, 'Paper annotations successfully updated.')
+    def put(self, paper_id):
+        """
+        Updates annotations made on a paper.
         """
         data = request.json
         update_annotation(id, data)

@@ -14,7 +14,7 @@ ns = api.namespace('entityrecognition', description='Allows for the retrieval, m
 
 @ns.route('/<int:id>')
 @api.response(404, 'Entities not found.')
-class PaperItem(Resource):
+class EntityItem(Resource):
 
     @api.marshal_with(entity)
     def get(self, id):

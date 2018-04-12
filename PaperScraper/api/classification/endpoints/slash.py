@@ -31,7 +31,7 @@ class ClassificationItem(Resource):
     @api.marshal_with(classification)
     def get(self, id):
         """
-        Returns a specific annotation.
+        Returns all classifications for a given paper.
         """
         # TODO
 
@@ -39,7 +39,7 @@ class ClassificationItem(Resource):
     @api.response(204, 'Classification successfully updated.')
     def put(self, id):
         """
-        Updates a annotation.
+        Updates a classification on a paper.
         """
         data = request.json
         update_classification(id, data)
