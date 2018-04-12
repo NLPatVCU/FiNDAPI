@@ -11,6 +11,7 @@ def update_entities(id, data):
     """
     # TODO
 
+
 def remove_entities(id, data):
     """
     Updates entities within a given paper.

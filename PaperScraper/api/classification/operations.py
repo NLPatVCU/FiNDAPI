@@ -1,12 +1,18 @@
 def create_classification(data):
     """
-    Adds an annotation to MongoDB database.
+    Adds a classification to a paper in the database.
     """
     # TODO
 
 
 def update_classification(id, data):
     """
-    Updates an annotation to MongoDB database.
+    Updates the classifications related to a paper.
+    """
+    # TODO
+
+def delete_classification(id, data):
+    """
+    Deletes all classifications related to a paper.
     """
     # TODO
