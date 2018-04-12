@@ -8,7 +8,8 @@ from PaperScraper.api.restplus import api
 
 log = logging.getLogger(__name__)
 
-ns = api.namespace('paper', description='Interact with MongoDB Papers Instance.')
+ns = api.namespace('paper', description='Allows for the retrieval, modification, insertion, and removal of a paper in '
+                                        'the database.')
 
 
 @ns.route('/')

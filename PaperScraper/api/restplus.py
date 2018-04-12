@@ -6,7 +6,8 @@ from PaperScraper import settings
 log = logging.getLogger(__name__)
 
 api = Api(version='1.0', title='PaperScraper',
-          description='An API that will parse any academic journal in a multitude of formats.')
+          description='An API that will parse any academic journal in a multitude of formats and provide a convient way '
+                      'to store and retrieve those documents as well as add aditional metadata.')
 
 
 @api.errorhandler

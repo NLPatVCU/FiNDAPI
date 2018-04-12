@@ -8,7 +8,8 @@ from PaperScraper.api.restplus import api
 
 log = logging.getLogger(__name__)
 
-ns = api.namespace('classification', description='Classify a paper which exists in the database.')
+ns = api.namespace('classification', description='Allows for the retrieval, modification, insertion, and removal '
+                                                 'of a classification for an paper in the database.')
 
 
 @ns.route('/')

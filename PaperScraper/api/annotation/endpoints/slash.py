@@ -8,7 +8,8 @@ from PaperScraper.api.restplus import api
 
 log = logging.getLogger(__name__)
 
-ns = api.namespace('annotation', description='Annotate a paper which exists in the database')
+ns = api.namespace('annotation', description='Allows for the retrieval, modification, insertion, and removal of '
+                                             'annotations for a paper in the database.')
 
 
 @ns.route('/')
