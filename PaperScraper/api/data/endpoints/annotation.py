@@ -3,7 +3,7 @@ import logging
 from flask import request
 from flask_restplus import Resource
 from PaperScraper.api.data.serializers import annotation
-from PaperScraper.api.data.database import create_annotation, update_annotation, delete_annotation
+from PaperScraper.api.data.operations import create_annotation, update_annotation, delete_annotation
 from PaperScraper.api.restplus import api
 
 log = logging.getLogger(__name__)
