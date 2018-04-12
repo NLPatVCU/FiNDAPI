@@ -4,8 +4,10 @@ import os
 from flask import Flask, Blueprint
 from PaperScraper import settings
 from PaperScraper.api.restplus import api
-from PaperScraper.api.data.endpoints.annotation import ns as data_annotation_ns
-from PaperScraper.api.data.endpoints.paper import ns as data_paper_ns
+from PaperScraper.api.paper.endpoints.slash import ns as paper_ns
+from PaperScraper.api.classification.endpoints.slash import ns as classification_ns
+from PaperScraper.api.annotation.endpoints.slash import ns as annotation_ns
+
 
 
 app = Flask(__name__)
@@ -27,10 +29,10 @@ def initialize_app(flask_app):
 
     blueprint = Blueprint('api', __name__, url_prefix='/api')
     api.init_app(blueprint)
-    api.add_namespace(data_annotation_ns)
-    api.add_namespace(data_paper_ns)
+    api.add_namespace(paper_ns)
+    api.add_namespace(classification_ns)
+    api.add_namespace(annotation_ns)
     flask_app.register_blueprint(blueprint)
-
 
 def main():
     initialize_app(app)

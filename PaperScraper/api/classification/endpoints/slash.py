@@ -12,7 +12,7 @@ ns = api.namespace('classification', description='Classify a paper which exists 
 
 
 @ns.route('/')
-class Annotation(Resource):
+class Classification(Resource):
 
     @api.marshal_list_with(classification)
     def get(self):
@@ -25,7 +25,7 @@ class Annotation(Resource):
 
 @ns.route('/<int:id>')
 @api.response(404, 'Classification not found.')
-class CategoryItem(Resource):
+class ClassificationItem(Resource):
 
     @api.marshal_with(classification)
     def get(self, id):
