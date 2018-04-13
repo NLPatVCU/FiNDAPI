@@ -1,5 +1,5 @@
 from flask_restplus import fields
-from PaperScraper.api.restplus import api
+from FiNDAPI.api.restplus import api
 
 entity = api.model('Entity', {
     'id': fields.Integer(required=True, description='The unique identifier of the paper.'),

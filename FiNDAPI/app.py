@@ -2,12 +2,12 @@ import logging.config
 
 import os
 from flask import Flask, Blueprint
-from PaperScraper import settings
-from PaperScraper.api.restplus import api
-from PaperScraper.api.paper.endpoints.slash import ns as paper_ns
-from PaperScraper.api.classification.endpoints.slash import ns as classification_ns
-from PaperScraper.api.annotation.endpoints.slash import ns as annotation_ns
-from PaperScraper.api.entityrecognition.endpoints.slash import ns as entityrecognition_ns
+from FiNDAPI import settings
+from FiNDAPI.api.restplus import api
+from FiNDAPI.api.paper.endpoints.slash import ns as paper_ns
+from FiNDAPI.api.classification.endpoints.slash import ns as classification_ns
+from FiNDAPI.api.annotation.endpoints.slash import ns as annotation_ns
+from FiNDAPI.api.entityrecognition.endpoints.slash import ns as entityrecognition_ns
 
 
 app = Flask(__name__)

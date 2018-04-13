@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='PaperScraper',
+    name='FiNDAPI',
     version='1.0',
     install_requires=[
         'Flask==0.12.2',

@@ -2,9 +2,9 @@ import logging
 
 from flask import request
 from flask_restplus import Resource
-from PaperScraper.api.classification.serializers import classification
-from PaperScraper.api.classification.operations import create_classification, update_classification
-from PaperScraper.api.restplus import api
+from FiNDAPI.api.classification.serializers import classification
+from FiNDAPI.api.classification.operations import create_classification, update_classification
+from FiNDAPI.api.restplus import api
 
 log = logging.getLogger(__name__)
 

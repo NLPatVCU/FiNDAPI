@@ -2,9 +2,9 @@ import logging
 
 from flask import request
 from flask_restplus import Resource
-from PaperScraper.api.paper.serializers import paper
-from PaperScraper.api.paper.operations import create_paper, update_paper, delete_paper
-from PaperScraper.api.restplus import api
+from FiNDAPI.api.paper.serializers import paper
+from FiNDAPI.api.paper.operations import create_paper, update_paper, delete_paper
+from FiNDAPI.api.restplus import api
 
 log = logging.getLogger(__name__)
 

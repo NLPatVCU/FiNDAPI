@@ -2,9 +2,9 @@ import logging
 
 from flask import request
 from flask_restplus import Resource
-from PaperScraper.api.entityrecognition.serializers import entity
-from PaperScraper.api.entityrecognition.operations import get_entities, update_entities, remove_entities
-from PaperScraper.api.restplus import api
+from FiNDAPI.api.entityrecognition.serializers import entity
+from FiNDAPI.api.entityrecognition.operations import get_entities, update_entities, remove_entities
+from FiNDAPI.api.restplus import api
 
 log = logging.getLogger(__name__)
 

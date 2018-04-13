@@ -2,9 +2,9 @@ import logging
 
 from flask import request
 from flask_restplus import Resource
-from PaperScraper.api.annotation.serializers import annotation
-from PaperScraper.api.annotation.operations import create_annotation, update_annotation
-from PaperScraper.api.restplus import api
+from FiNDAPI.api.annotation.serializers import annotation
+from FiNDAPI.api.annotation.operations import create_annotation, update_annotation
+from FiNDAPI.api.restplus import api
 
 log = logging.getLogger(__name__)
 
